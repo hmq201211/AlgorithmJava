@@ -20,20 +20,26 @@ public class Solution {
             Deque<TreeNode> next = new LinkedList<>();
             while (!treeNodes.isEmpty()) {
                 TreeNode treeNode = treeNodes.pollFirst();
-                if (treeNode != null) {
-                    temp.add(treeNode.val);
-                    if (fromLeft) {
-                        next.addFirst(treeNode);
-                    } else {
-                        next.addLast(treeNode);
+                if (fromLeft) {
+                    if (treeNode.right != null) {
+                        next.addFirst(treeNode.right);
+                    }
+                    if (treeNode.left != null) {
+                        next.addFirst(treeNode.left);
+                    }
+                } else {
+                    if (treeNode.right != null) {
+                        next.addLast(treeNode.right);
+                    }
+                    if (treeNode.left != null) {
+                        next.addLast(treeNode.left);
                     }
                 }
                 fromLeft = !fromLeft;
             }
-            if (!next.isEmpty() && !temp.isEmpty()) {
-                toReturn.add(temp);
-                queue.add(next);
-            }
+            toReturn.add(temp);
+            queue.add(next);
+
         }
         return toReturn;
     }
