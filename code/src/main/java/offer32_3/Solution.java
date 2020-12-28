@@ -1,4 +1,4 @@
-package offer032_3;
+package offer32_3;
 
 import common.TreeNode;
 
