@@ -1,6 +1,7 @@
 package q654;
 
 import common.TreeNode;
+import common.TreeNodeUtils;
 
 public class Solution {
     public TreeNode constructMaximumBinaryTree(int[] nums) {
@@ -28,6 +29,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        new Solution().constructMaximumBinaryTree(new int[]{3, 2, 1, 6, 0, 5});
+        TreeNode treeNode = new Solution().constructMaximumBinaryTree(new int[]{3, 2, 1, 6, 0, 5});
+        TreeNodeUtils.printTree(treeNode);
     }
 }
