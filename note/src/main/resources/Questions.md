@@ -1,6 +1,11 @@
 # Leetcode
 
 ## 二叉树
+### 从根到叶的二进制数之和
+![img.png](q1022.png)
+
+### 路径总和
+![img.png](q112.png)
 
 ### 翻转二叉树
 ![img.png](q226.png)
